@@ -79,5 +79,5 @@ resource "aws_lightsail_key_pair" "instance" {
 }
 
 resource "aws_lightsail_domain" "test" {
-  domain_name = var.domain_name
+  domain_name = var.domain_name == "" ? null : var.domain_name
 }
